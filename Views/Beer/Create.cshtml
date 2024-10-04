@@ -1,0 +1,29 @@
+@model BeerViewModel
+
+<h1>Create Beer</h1>
+<hr>
+<div>
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" style="color: red;"></div>
+
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" type="text">
+            <span asp-validation-for="Name" style="color: red;"></span>
+        </div>
+
+        <div>
+            <label asp-for="BrandId"></label>
+            <select asp-for="BrandId" asp-items="ViewBag.Brands"></select>
+            <span asp-validation-for="BrandId" style="color: red;"></span>
+        </div>
+
+        <button>Submit</button>
+    </form>
+</div>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,23 @@
+:root {
+   --bgDark: #11151a;
+   --bgLight: #eeeeee;
+   --textDark: #eeeeee;
+   --textWhite: #393e46;
+   --titleColor: #00adb5;
+}
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   color: var(--textDark);
+   background-color: var(--bgDark);
+}
+a {
+   font-size: 1.2rem;
+   text-decoration: none;
+   color: var(--titleColor);
+}
